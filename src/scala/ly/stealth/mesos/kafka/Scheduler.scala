@@ -66,8 +66,8 @@ object Scheduler extends org.apache.mesos.Scheduler {
         "log.dirs" -> "kafka-logs",
         "log.retention.bytes" -> ("" + 10l * 1024 * 1024 * 1024),
 
-        "zookeeper.connect" -> Config.zk,
-        "host.name" -> offer.getHostname
+        "zookeeper.connect" -> Config.zk
+//        "host.name" -> offer.getHostname
       )
 
       val data = new util.HashMap[String, String]()
